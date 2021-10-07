@@ -15,10 +15,10 @@ class PostSeeder extends Seeder
 				for($i = 0; $i < 6; $i++){
                 $model->insert([
                         'judul'      => static::faker()->sentence(3),
-                        'slug' 		 => static::faker()->unique()->slug(2),
-						'author' 	 => static::faker()->name(),
-						'kategori'   => $kategori[0],
-						'deskripsi'  => static::faker()->text()
+                        'slug' 	     => static::faker()->unique()->slug(2),
+			'author'     => static::faker()->name(),
+			'kategori'   => $kategori[0],
+			'deskripsi'  => static::faker()->text()
                 ]);
         }
 	}
