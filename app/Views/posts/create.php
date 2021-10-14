@@ -205,7 +205,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
+            <h1 class="m-0">My Posts</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -217,7 +217,45 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-    
+    <div class="container">
+    <div class="card">
+  <div class="card-header">
+    Form Tambah Posts
+  </div>
+  <div class="card-body">
+  <form>
+    <div class="row">
+    <div class="col-md-4">
+  <div class="from-group">
+    <label for="judul" class="form-label">Judul Postingan</label>
+    <input type="text" class="form-control" id="judul" name="judul">
+  </div>
+  <div class="from-group">
+    <label for="slug" class="form-label">Slug</label>
+    <input type="text" class="form-control" id="slug" name="slug">
+  </div>
+  <div class="from-group">
+    <label for="kategori" class="form-label">Kategori Postingan</label>
+    <input type="text" class="form-control" id="kategori" name="kategori">
+  </div>
+  <div class="from-group">
+    <label for="author" class="form-label">Author</label>
+    <input type="text" class="form-control" id="author" name="author">
+  </div>
+  <button type="submit" class="btn btn-primary">
+      <i class="fas fa-papper-plane"></i>Submit
+    </button>
+</div>
+<div class="col-md-8">
+    <label for="deskripsi">Deskripsi Postingan</label>
+    <br>
+    <textarea name="deskripsi" id="deskripsi"></textarea>
+</div>
+</div>
+</form>
+  </div>
+</div>
+    </div>
 
     </section>
     <!-- /.content -->
@@ -239,4 +277,11 @@
 </div>
 <!-- ./wrapper -->
 
-<?= $this->endSection() ?>
+<?= $this->endSection(); ?>
+
+<?= $this->section('myscript'); ?>
+<script>
+    $('#deskripsi').summernote()
+</script>
+
+<?= $this->endSection(); ?>
