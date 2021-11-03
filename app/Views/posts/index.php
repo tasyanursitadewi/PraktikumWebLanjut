@@ -19,10 +19,10 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="/home" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a href="/about" class="nav-link">Contact</a>
       </li>
     </ul>
 
@@ -165,7 +165,7 @@
           <img src="/assets/adminlte/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block">Tasya Nursita Dewi</a>
         </div>
       </div>
 
@@ -191,6 +191,12 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="/admin/users" class="nav-link">
+              <i class="nav-icon fas fa-user-graduate"></i>
+              <p>Data User</p>
+           </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -209,8 +215,8 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v1</li>
+              <li class="breadcrumb-item"><a href="/admin">Home</a></li>
+              <li class="breadcrumb-item active">My Posts</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -249,8 +255,13 @@
                     <td><?= $post['author']; ?></td>
                     <td><?= $post['kategori']; ?></td>
                     <td>
-                      <a href="/admin/posts/edit/<?= $post['slug']; ?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-edit"></i>Edit</a>
-                      <a href="/admin/posts/delete/<?= $post['slug']; ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i>Delete</a>
+                      <a href="posts/edit/<?= $post['post_id']; ?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-edit"></i> Edit</a>
+
+                      <form action="posts/<?= $post['post_id']; ?>" method="post" class="d-inline">
+                      <?= csrf_field(); ?>
+                      <input type="hidden" name="_method" value="delete">
+                      <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda yakin ?');"><i class="fas fa-trash"></i> Hapus</button>
+                      </form>
                     </td>
                   </tr>
                 <?php endforeach; ?>

@@ -19,10 +19,10 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="/home" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
+        <a href="/about" class="nav-link">Contact</a>
       </li>
     </ul>
 
@@ -165,7 +165,7 @@
           <img src="/assets/adminlte/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block">Tasya Nursita Dewi</a>
         </div>
       </div>
 
@@ -190,6 +190,12 @@
                 My Posts
               </p>
             </a>
+          </li>
+          <li class="nav-item">
+            <a href="/admin/users" class="nav-link">
+              <i class="nav-icon fas fa-user-graduate"></i>
+              <p>Data User</p>
+           </a>
           </li>
         </ul>
       </nav>

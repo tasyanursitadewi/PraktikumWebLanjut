@@ -47,6 +47,8 @@ class Templating extends BaseController
 			'password' => $request->getVar('password'),
 		];
 		$this->userModel->insert($data);
-		return redirect()->to('/register');
+		session()->setFlashdata('pesan', 'Registrasi Sukses');
+		return redirect()->to('/home');
+        // return redirect()->to('/register');
 	}
 }

@@ -3,5 +3,6 @@
         <img src="/assets/images/linux.png" alt="logo" width="180" class="img-thumbnail rounded-circle">
         <h1 class="display-4">Praktikum Web Lanjut Dengan Studi Kasus Blog App</h1>
         <p class="lead">Programming | Codeigniter 4 | Php</p>
+        <p>1917051035 - Tasya Nursita Dewi</p>
     </div>
 </div>
